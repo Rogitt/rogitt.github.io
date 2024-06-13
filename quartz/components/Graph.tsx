@@ -29,16 +29,16 @@ const defaultOptions: GraphOptions = {
   localGraph: {
     drag: true,
     zoom: true,
-    depth: 1,
+    depth: 2,
     scale: 1.1,
     repelForce: 0.5,
     centerForce: 0.3,
     linkDistance: 30,
     fontSize: 0.6,
     opacityScale: 1,
-    showTags: true,
+    showTags: false,
     removeTags: [],
-    focusOnHover: false,
+    focusOnHover: true,
   },
   globalGraph: {
     drag: true,
@@ -50,7 +50,7 @@ const defaultOptions: GraphOptions = {
     linkDistance: 30,
     fontSize: 0.6,
     opacityScale: 1,
-    showTags: true,
+    showTags: false,
     removeTags: [],
     focusOnHover: true,
   },
@@ -73,7 +73,7 @@ export default ((opts?: GraphOptions) => {
             x="0px"
             y="0px"
             viewBox="0 0 55 55"
-            fill="currentColor"
+            fill="#00D4F5"
             xmlSpace="preserve"
           >
             <path

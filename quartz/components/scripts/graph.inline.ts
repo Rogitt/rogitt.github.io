@@ -150,11 +150,24 @@ async function renderGraph(container: string, fullSlug: FullSlug) {
   // calculate color
   const color = (d: NodeData) => {
     const isCurrent = d.id === slug
-    if (isCurrent) {
-      return "var(--secondary)"
-    } else if (visited.has(d.id) || d.id.startsWith("tags/")) {
-      return "var(--tertiary)"
-    } else {
+    if (isCurrent) {}
+    if(d.tags.length != 0){
+      if(d.tags.includes("kernel-exploitation")){
+          return "var(--default-value, #00D4F5)"
+      } else if(d.tags.includes("heap-exploitation")){
+          return "var(--default-value, #FE6B25)"
+      } else if(d.tags.includes("stack-exploitation")){
+          return "var(--default-value, #FFB000)"
+      } else if(d.tags.includes("blog")){
+        return "var(--default-value, #3A99F5)"
+      } else {
+          return "var(--default-value, #FFFFFF)"
+        }
+      }
+    // else if (visited.has(d.id) || d.id.startsWith("tags/")) {
+    //   return "var(--default-value, #FFFFFF)"
+    // } 
+    else {
       return "var(--gray)"
     }
   }
@@ -289,6 +302,10 @@ async function renderGraph(container: string, fullSlug: FullSlug) {
     .attr("stroke-width", 2)
     .attr("fill", "var(--light)")
 
+  node
+    .filter((d) => (d.tags.length != 0))
+    .attr("fill",color)
+    
   // draw labels
   const labels = graphNode
     .append("text")

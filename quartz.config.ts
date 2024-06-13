@@ -4,25 +4,24 @@ import * as Plugin from "./quartz/plugins"
 /**
  * Quartz 4.0 Configuration
  *
- * See https://quartz.jzhao.xyz/configuration for more information.
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "🪴 Quartz 4.0",
+    pageTitle: "R0R1",
     enableSPA: true,
     enablePopovers: true,
     analytics: {
       provider: "plausible",
     },
     locale: "en-US",
-    baseUrl: "quartz.jzhao.xyz",
+    baseUrl: "R0R11.github.io",
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "created",
     theme: {
       fontOrigin: "googleFonts",
       cdnCaching: true,
       typography: {
-        header: "Schibsted Grotesk",
+        header: "Reddit Mono",
         body: "Source Sans Pro",
         code: "IBM Plex Mono",
       },
@@ -43,8 +42,8 @@ const config: QuartzConfig = {
           gray: "#646464",
           darkgray: "#d4d4d4",
           dark: "#ebebec",
-          secondary: "#7b97aa",
-          tertiary: "#84a59d",
+          secondary: "#FB3252",
+          tertiary: "#FF8E8E",
           highlight: "rgba(143, 159, 169, 0.15)",
         },
       },
